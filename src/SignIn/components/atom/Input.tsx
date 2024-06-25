@@ -1,32 +1,25 @@
 import React from "react";
 import { CSSProperties } from "react";
+import { SIZES } from "../../../css/root";
 
 export type InputProps = {
   type: "text" | "password";
   placeholder: string;
+  text: "아이디" | "비밀번호" | "비밀번호 확인" | "이메일" | "인증번호";
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-const Input = ({ type, placeholder }: InputProps) => {
-  const style: CSSProperties = {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: "10px",
-    margin: "10px 0",
-  };
-
-  const inputStyle: CSSProperties = {
-    width: "100%",
-    height: "40px",
-    borderRadius: "5px",
-    border: "1px solid #d1d1d1",
-    paddingLeft: "10px",
+const Input = ({ type, placeholder, text, onChange }: InputProps) => {
+  const spanStyle: CSSProperties = {
+    fontSize: SIZES.FONT_SIZE.SMALL,
   };
 
   return (
-    <div style={style}>
-      <input style={inputStyle} type={type} placeholder={placeholder} />
+    <div>
+      <span style={spanStyle}>{text}</span>
+      <div>
+        <input type={type} placeholder={placeholder} onChange={onChange} />
+      </div>
     </div>
   );
 };

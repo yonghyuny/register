@@ -29,8 +29,8 @@ const SignIn = () => {
         }}
         textP={{ text: MESSAGE.E_SIGNIN }}
       />
-      <Input type="text" placeholder={MESSAGE.EMAIL} />
-      <Input type="password" placeholder={MESSAGE.PWD} />
+      {/* <Input type="text" placeholder={MESSAGE.EMAIL} />
+      <Input type="password" placeholder={MESSAGE.PWD} /> */}
       <BottomGroup
         textC={{ text: "Remember me" }}
         textP={{ text: LINK.FORGOT }}

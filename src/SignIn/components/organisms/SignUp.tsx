@@ -27,10 +27,10 @@ const SignUp = () => {
         }}
         textP={{ text: MESSAGE.E_SIGNUP }}
       />
-      <Input type="text" placeholder={MESSAGE.FNAME} />
+      {/* <Input type="text" placeholder={MESSAGE.FNAME} />
       <Input type="text" placeholder={MESSAGE.LNAME} />
       <Input type="text" placeholder={MESSAGE.EMAIL} />
-      <Input type="password" placeholder={MESSAGE.PWD} />
+      <Input type="password" placeholder={MESSAGE.PWD} /> */}
       <div
         style={{
           width: "100%",
